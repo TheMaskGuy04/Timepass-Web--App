@@ -5,7 +5,7 @@ import base64 from "base-64";
 
 const app = express();
 const port = 3000;
-const API_key = "gitWC5GY3KjsL7t1BPjHNT1rDIH1VrmVUReE1n5v";
+const API_key = "YOUR_API_KEY";
 const API_URL = "https://api.api-ninjas.com/v1";
 
 
