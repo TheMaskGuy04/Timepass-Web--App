@@ -1,0 +1,86 @@
+<%- include('partials/header.ejs') %>
+
+<body class="form">
+    <div class="container">
+        <% if (locals.formType == "hobbie") { %>
+            <form action="/hobbieSubmit" method="POST">
+                <label for="hobbie_Category" class="form-label">Hobbie Category</label>
+                <select class="form-select" aria-label="Default select example" id="hobbie_Category" name="category">
+                    <option value="">Select the Category</option>
+                    <option value="general">General</option>
+                    <option value="sports_and_outdoors">Sports and Outdoor</option>
+                    <option value="education">Education</option>
+                    <option value="collection">Collection</option>
+                    <option value="competition">Competition</option>
+                    <option value="observation">Observation</option>
+                  </select>
+                  <button type="submit" class="btn btn-primary m-3">Submit</button>
+            </form>
+        <% } %>
+
+        <% if (locals.formType == "exercise") { %>
+            <form action="/exerciseSubmit" method="POST">
+                <label for="exercise_type" class="form-label">Exercise Type</label>
+                <select class="form-select" aria-label="Default select example" id="exercise_type" name="type">
+                    <option value="">Select the type</option>
+                    <option value="cardio">Cardio</option>
+                    <option value="powerlifting">Power Lifting</option>
+                    <option value="strength">Strength</option>
+                    <option value="stretching">Stretching</option>
+                    <option value="plyometrics">Plyometrics</option>
+                    <option value="olympic_weightlifting">Olympic Weight Lifting</option>
+                    <option value="strongman">Strong Man</option>
+                </select>
+
+                <label for="muscle" class="form-label">Targeted Muscle (Optional)</label>
+                <select class="form-select" aria-label="Default select example" id="muscle" name="muscle">
+                    <option value="">Select the muscle </option>
+                    <option value="abdominals">Abdominals</option>
+                    <option value="abductors">Abductors</option>
+                    <option value="adductors">Adductors</option>
+                    <option value="biceps">Biceps</option>
+                    <option value="calves">Calves</option>
+                    <option value="chest">Chest</option>
+                    <option value="forearms">Forearms</option>
+                    <option value="glutes">Glutes</option>
+                    <option value="hamstrings">Hamstrings</option>
+                    <option value="lats">Lats</option>
+                    <option value="lower_back">Lower Back</option>
+                    <option value="middle_back">Middle Back</option>
+                    <option value="neck">Neck</option>
+                    <option value="quadriceps">Quadriceps</option>
+                    <option value="traps">Traps</option>
+                    <option value="triceps">Triceps</option>
+                </select>
+
+                <label for="difficulty" class="form-label">Difficulty Level</label>
+                <select class="form-select" aria-label="Default select example" id="difficulty" name="difficulty">
+                    <option value="">Select the level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="expert">Expert</option>
+                </select>
+                <button type="submit" class="btn btn-primary m-3">Submit</button>
+            </form>
+        <% } %>
+
+        <% if (locals.formType == "qr-code") { %>
+            <form action="qrCodeSubmit" method="POST">
+                <label for="url" class="form-label">Enter the URL of the Website</label>
+                <input type="url" name="url" class="form-control" placeholder="https://example.com" id="url" name="url">
+
+                <button type="submit" class="btn btn-primary m-3">Submit</button>
+            </form>
+
+        <% } %>
+
+        <% if (locals.formType == "weather") { %>
+            <form action="/weatherSubmit" method="POST">
+                <label for="city" class="form-label">Enter the City Name</label>
+                <input type="text" name="city" class="form-control" placeholder="example: Bhiwandi" id="city" name="city">
+
+                <button type="submit" class="btn btn-primary m-3">Submit</button>
+            </form>
+        <% } %>
+    </div>
+</body>

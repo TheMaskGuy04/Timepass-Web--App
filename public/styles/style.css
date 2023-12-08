@@ -1,0 +1,34 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,#0E21A0, #4D2DB7, #9D44C0, #EC53B0);
+}
+
+.contact, .form{
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.container {
+    margin-bottom: 1.5rem;
+}
+
+select {
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+p, h1, h2, h6, label, li, a{
+    color: white;
+}
+
