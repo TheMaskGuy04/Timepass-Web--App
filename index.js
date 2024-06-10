@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import base64 from "base-64";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 4000;
 const API_key = "YOUR_API_KEY";
 const API_URL = "https://api.api-ninjas.com/v1";
 
